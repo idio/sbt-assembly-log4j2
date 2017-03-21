@@ -24,7 +24,7 @@ addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "<version>")
 addSbtPlugin("org.idio" % "sbt-assembly-log4j2" % "0.1.0")
 ```
 
-[sbt-assembly]: https://github.com/sbt/sbt-assembly
+[sbt-assembly]: https://github.com/sbt/sbt-assembly#setup
 
 ## Usage
 
