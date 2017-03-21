@@ -9,6 +9,23 @@ serialisable cache from multiple different ones.
 
 **This plugin** provides a simple function to merge those files in a safe way.
 
+## Setup
+
+For sbt 0.13.6+ add `sbt-assembly-log4j2` as a dependency in
+`project/assembly.sbt` alongside [`sbt-assembly`][sbt-assembly]:
+
+```scala
+resolvers += Resolver.url(
+  "idio",
+  url("http://dl.bintray.com/idio/sbt-plugins")
+)(Resolver.ivyStylePatterns)
+
+addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "<version>")
+addSbtPlugin("org.idio" % "sbt-assembly-log4j2" % "0.1.0")
+```
+
+[sbt-assembly]: https://github.com/sbt/sbt-assembly
+
 ## Usage
 
 In your merge strategy, add the following case:
