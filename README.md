@@ -26,6 +26,26 @@ addSbtPlugin("org.idio" % "sbt-assembly-log4j2" % "0.1.0")
 
 [sbt-assembly]: https://github.com/sbt/sbt-assembly#setup
 
+## Fetch from github packages
+As bintray is closing down we have published this on github packages
+
+To fetch it you need to set up the github packages sbt plugin
+
+You need to have a personal github token defined in your environment, read more here:
+https://github.com/djspiewak/sbt-github-packages
+
+project/project/plugins.sbt
+```scala
+addSbtPlugin("com.codecommit" % "sbt-github-packages" % "0.5.2")
+```
+
+project/plugins.sbt
+```scala
+resolvers += Resolver.githubPackages("idio")
+addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "<version>")
+addSbtPlugin("org.idio" % "sbt-assembly-log4j2" % "0.1.0")
+```
+
 ## Usage
 
 In your merge strategy, add the following case:
