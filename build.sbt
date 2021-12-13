@@ -22,4 +22,5 @@ lazy val root = (project in file(".")).
     publishArtifact in (Test, packageBin) := false,
     publishArtifact in (Compile, packageDoc) := false,
     publishArtifact in (Compile, packageSrc) := true,
+    publishTo := Some("Blob Snapshots" at "blob://optimizelyds/artifacts")
   )
