@@ -14,7 +14,7 @@ lazy val root = (project in file(".")).
     scalacOptions := Seq("-deprecation", "-unchecked"),
     addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.10"),
     libraryDependencies ++= Seq(
-      "org.apache.logging.log4j" % "log4j-core" % "2.15.0"
+      "org.apache.logging.log4j" % "log4j-core" % "2.16.0"
     ),
     crossSbtVersions := Seq("0.13.16", "1.2.8"),
     crossScalaVersions := Seq("2.11.8", "2.12.10"),   
