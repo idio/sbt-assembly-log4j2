@@ -1,1 +1,1 @@
-addSbtPlugin("com.codecommit" % "sbt-github-packages" % "0.5.2")
+addSbtPlugin("io.github.lukaci" %% "sbt-azureblob-resolver" % "0.10.0")

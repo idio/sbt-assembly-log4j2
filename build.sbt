@@ -1,5 +1,5 @@
 lazy val commonSettings: Seq[Setting[_]] = Seq(
-  git.baseVersion in ThisBuild := "2.0.1",
+  git.baseVersion in ThisBuild := "2.0.2",
   organization in ThisBuild := "org.idio"
 )
 
@@ -14,7 +14,7 @@ lazy val root = (project in file(".")).
     scalacOptions := Seq("-deprecation", "-unchecked"),
     addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.10"),
     libraryDependencies ++= Seq(
-      "org.apache.logging.log4j" % "log4j-core" % "2.8.1"
+      "org.apache.logging.log4j" % "log4j-core" % "2.17.0"
     ),
     crossSbtVersions := Seq("0.13.16", "1.2.8"),
     crossScalaVersions := Seq("2.11.8", "2.12.10"),   
@@ -22,4 +22,5 @@ lazy val root = (project in file(".")).
     publishArtifact in (Test, packageBin) := false,
     publishArtifact in (Compile, packageDoc) := false,
     publishArtifact in (Compile, packageSrc) := true,
+    publishTo := Some("Blob Snapshots" at "blob://optimizelyds/artifacts")
   )
